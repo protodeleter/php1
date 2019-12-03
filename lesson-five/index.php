@@ -24,12 +24,17 @@ include_once 'login.php';
 
 <body>
 
+<?php if ( $_SESSION['user'] ) { ?>
 
-<form method="post" action="login.php" >
-    <input type="text" name="username" value="" placeholder="Username" />
-    <input type="password" name="password" value="" placeholder="Password" />
-    <input type="submit" value="Login" />
-</form>
+    exist
+
+<?php } else { ?>
+ not exist
+<?php }
+
+session_destroy ();
+?>
+
 
 
 </body>

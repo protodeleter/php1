@@ -5,7 +5,7 @@
  * Date: 01.12.2019
  * Time: 22:16
  */
-
+session_start ();
 
 function getUsersList() {
     $u_list = include ('users.php');
@@ -13,54 +13,36 @@ function getUsersList() {
 }
 
 function existsUser($login) {
-    $usernames = [];
-    $pass_arr = [];
+    $u_list = getUsersList();
+    foreach ($u_list as $k => $u) {
+        if ( in_array ( $login,$u ) ) {
+            return true;
+        }
+    }
+    return false;
+}
+
+//echo existsUser('Pavel');
+
+function сheckPassword($login, $password) {
 
     $u_list = getUsersList();
 
     foreach ($u_list as $k => $u) {
 
-        print_r($u_list[$k]);
-
-//        if ( in_array($login, $u_list[$k] ) ) {
-//
-//            echo 'true';
-//
-//        }
-
-//        $usernames[] = $u['username'];
-//        $pass_arr[] = $u['password'];
+        if ( $login === $u['username']  &&  password_verify ( $password, $u['password']  ) ) {
+            $_SESSION['user'] = $login;
+            return true;
+        }
 
     }
 
-    if ( in_array($login, $usernames ) ) {
-        return true;
-    } else {
-        return false;
-    }
+    return 'false';
 }
 
-existsUser('Andrey');
+сheckPassword( 'Pavel', 123123 );
 
-function сheckPassword($login, $password) {
-
-    if ( (bool)existsUser( $login ) ) {
-        echo 'true';
-    } else {
-        echo 'false';
-    }
-
-    if ( password_verify ( 123123, '$2y$10$HlqFOeuhN2GfcqZ8tHIihumh.y048S64YjSIRMSaZoT0Juysg/toy' ) ) {
-        echo 'p true';
-    } else {
-        echo 'p false';
-    }
-
-    return true;
-}
-
-//сheckPassword( 'Pavel', 123123 );
-
+print_r( $_SESSION );
 
 function getCurrentUser() {
 
