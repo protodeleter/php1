@@ -1,0 +1,59 @@
+из примера
+
+только пока непонятно где и как это использовать.
+
+Пример #5 Выражения include и return
+return.php
+<?php
+
+$var = 'PHP';
+
+return $var;
+
+?>
+
+noreturn.php
+<?php
+
+$var = 'PHP';
+
+?>
+
+testreturns.php
+<?php
+
+$foo = include 'return.php';
+
+echo $foo; // выведет 'PHP'
+
+$bar = include 'noreturn.php';
+
+echo $bar; // выведет 1
+
+?>
+
+функция возращает булиан 1 если файл найден или false если файл подключить не удалось
+
+
+в третьем случае:
+
+функция поключает файл и возвращает значение с помощью return в подключенном файле.
+во втором случае просто подключает файл и возвращает булиан о том что файл подключился.
+
+
+хотя сам механизм до конца непонятен.
+это то же самое что запустить функцию у которой параметр будет тоже функция ?
+
+
+function run_function($a) {
+    return $a;
+}
+
+function parameter_function() {
+    return 'test';
+}
+
+echo run_function( parameter_function() );
+
+
+
