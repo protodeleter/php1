@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="845a082e-f32c-49fc-8cc5-a0ba6c40d82c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lesson-three/index.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/discriminanta.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files-work.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files-workgalleryimage-43.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/get_form.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/get_form.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/homework2.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/homework2.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/image.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/image-42.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/img/image-43.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/include().txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/index.zip" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/male_female.php" afterPath="" />
-    </list>
+    <list default="true" id="845a082e-f32c-49fc-8cc5-a0ba6c40d82c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +100,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="300" />
     <option name="y" value="121" />
     <option name="width" value="1400" />
@@ -195,15 +178,15 @@
       <updated>1573839550087</updated>
       <workItem from="1573839551290" duration="16701000" />
       <workItem from="1574285869939" duration="30658000" />
-      <workItem from="1575016344043" duration="34166000" />
+      <workItem from="1575016344043" duration="34477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81525000" />
+    <option name="totallyTimeSpent" value="81836000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
