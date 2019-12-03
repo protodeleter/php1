@@ -22,8 +22,6 @@ if ( isset( $_GET ) ) {
 
 }
 
-echo $_GET;
-
 ?>
 
 <html>
@@ -37,8 +35,11 @@ echo $_GET;
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
 
+    число
     <input type="number" value="<?php echo $number_one; ?>" name="number_one" placeholder=""/>
+    число
     <input type="number" value="<?php echo $number_two; ?>" name="number_two" placeholder=""/>
+    знак
     <input type="text" value="<?php echo $math_sign; ?>" name="math_sign" placeholder=""/>
 
     <input type="submit" value="равно" name="" /> <?php echo calculator_php( $number_one,$number_two,$math_sign ); ?>

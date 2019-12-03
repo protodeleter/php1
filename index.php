@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: text/html; charset=utf-8');
 
 $dirs = scandir (__DIR__);
 
@@ -14,7 +14,7 @@ foreach ($dirs as $dir) {
 
 ?>
 
-        <a href="<?php echo urlencode ($dir); ?>"> <?php echo $dir; ?>  </a> <br/>
+        <a href="<?php echo urlencode($dir); ?>"> <?php echo $dir; ?>  </a> <br/>
 
 <?php
     } else {
