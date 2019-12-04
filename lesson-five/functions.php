@@ -22,8 +22,6 @@ function existsUser($login) {
     return false;
 }
 
-//echo existsUser('Pavel');
-
 function сheckPassword($login, $password) {
 
     $u_list = getUsersList();
@@ -31,20 +29,20 @@ function сheckPassword($login, $password) {
     foreach ($u_list as $k => $u) {
 
         if ( $login === $u['username']  &&  password_verify ( $password, $u['password']  ) ) {
-            $_SESSION['user'] = $login;
+//            $_SESSION['user'] = $login;
             return true;
         }
 
     }
 
-    return 'false';
+    return false;
 }
 
-сheckPassword( 'Pavel', 123123 );
 
-print_r( $_SESSION );
 
 function getCurrentUser() {
 
 }
+
+
 

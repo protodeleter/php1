@@ -6,12 +6,20 @@
  * Time: 22:12
  */
 
+
 session_start ();
+//session_destroy ();
 
 include_once 'users.php';
 include_once 'functions.php';
-include_once 'login.php';
+//include_once 'login.php';
 
+
+if ( !isset( $_SESSION['user'] ) ) {
+
+    Header( "Location: /lesson-five/login.php" );
+
+}
 
 ?>
 
@@ -24,17 +32,8 @@ include_once 'login.php';
 
 <body>
 
-<?php if ( $_SESSION['user'] ) { ?>
 
-    exist
-
-<?php } else { ?>
- not exist
-<?php }
-
-session_destroy ();
-?>
-
+<a href="logout.php"> Logout </a>
 
 
 </body>

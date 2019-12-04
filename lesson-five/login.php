@@ -5,14 +5,53 @@
  * Date: 01.12.2019
  * Time: 22:17
  */
+ob_start();
 
+session_start ();
 include_once 'functions.php';
 
-if ( isset( $_POST['username'] ) && isset( $_POST['password'] ) ) {
+//print_r( $_POST );
 
+if ( isset( $_POST['username'] ) && !empty($_POST['username']) ) {
     $login = $_POST['username'];
+} else {
+    $login = "";
+}
+
+if ( isset( $_POST['password'] ) && !empty( $_POST['username'] ) ) {
     $password = $_POST['password'];
+} else {
+    $password = "";
+}
+
+
+
+if ( $login != "" && !existsUser($login) ) {
+
+    echo 'user doesn"t exist';
+
+} else {
+
+    if (  сheckPassword( $login, $password ) ) {
+
+        $_SESSION['user'] = $login;
+
+    }
 
 }
 
-//сheckPassword($login, $password);
+//print_r($_SESSION);
+
+if ( isset( $_SESSION['user'] ) ) {
+
+    Header( "Location: /lesson-five/index.php" );
+
+} else { ?>
+
+<form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" >
+    <input type="text" name="username" value="" placeholder="Username" />
+    <input type="password" name="password" value="" placeholder="Password" />
+    <input type="submit" value="Login" />
+</form>
+
+<?php } ?>
