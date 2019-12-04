@@ -38,10 +38,14 @@ function сheckPassword($login, $password) {
     return false;
 }
 
-
-
 function getCurrentUser() {
+    if ( isset( $_SESSION['user'] ) ) {
 
+        return $_SESSION['user'];
+
+    }
+
+    return false;
 }
 
 

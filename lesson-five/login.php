@@ -12,6 +12,8 @@ include_once 'functions.php';
 
 //print_r( $_POST );
 
+if ( $_POST ):
+
 if ( isset( $_POST['username'] ) && !empty($_POST['username']) ) {
     $login = $_POST['username'];
 } else {
@@ -36,9 +38,15 @@ if ( $login != "" && !existsUser($login) ) {
 
         $_SESSION['user'] = $login;
 
+    } else {
+
+        echo 'Details wrong';
+
     }
 
 }
+
+endif;
 
 //print_r($_SESSION);
 

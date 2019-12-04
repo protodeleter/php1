@@ -5,21 +5,26 @@
  * Date: 01.12.2019
  * Time: 22:12
  */
-
-
 session_start ();
 //session_destroy ();
 
-include_once 'users.php';
 include_once 'functions.php';
-//include_once 'login.php';
+include_once 'class.upload.php';
 
 
 if ( !isset( $_SESSION['user'] ) ) {
-
     Header( "Location: /lesson-five/login.php" );
-
 }
+
+
+    if ( isset( $_FILES['upload'] ) ):
+
+        $upl = new Upload( $_FILES );
+        print_r( $_SESSION['errors'] );
+
+    endif;
+
+
 
 ?>
 
@@ -32,9 +37,23 @@ if ( !isset( $_SESSION['user'] ) ) {
 
 <body>
 
-
+<?php echo getCurrentUser(); ?>
 <a href="logout.php"> Logout </a>
 
+<?php if ( isset( $_SESSION['user'] ) ){ ?>
+
+
+
+<form action="<?php $_SERVER['PHP_SELF']; ?>" method="post"  enctype="multipart/form-data">
+
+    <input type="file" value="" name="upload" />
+    <input type="submit" value="Upload image"/>
+
+</form>
+
+
+
+<?php } ?>
 
 </body>
 

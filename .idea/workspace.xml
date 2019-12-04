@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845a082e-f32c-49fc-8cc5-a0ba6c40d82c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lesson-five/logout.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/lesson-five/functions.php" afterPath="$PROJECT_DIR$/lesson-five/functions.php" />
       <change beforePath="$PROJECT_DIR$/lesson-five/index.php" afterPath="$PROJECT_DIR$/lesson-five/index.php" />
       <change beforePath="$PROJECT_DIR$/lesson-five/login.php" afterPath="$PROJECT_DIR$/lesson-five/login.php" />
@@ -17,11 +15,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lesson-five/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="454">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lesson-five/class.upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lesson-five/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="454">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -50,8 +58,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lesson-five/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
-              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="564">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,10 +102,11 @@
         <option value="$PROJECT_DIR$/lesson-three/image.php" />
         <option value="$PROJECT_DIR$/lesson-three/index.php" />
         <option value="$PROJECT_DIR$/lesson-three/get_form.php" />
-        <option value="$PROJECT_DIR$/lesson-five/functions.php" />
-        <option value="$PROJECT_DIR$/lesson-five/index.php" />
         <option value="$PROJECT_DIR$/lesson-five/logout.php" />
+        <option value="$PROJECT_DIR$/lesson-five/functions.php" />
         <option value="$PROJECT_DIR$/lesson-five/login.php" />
+        <option value="$PROJECT_DIR$/lesson-five/class.upload.php" />
+        <option value="$PROJECT_DIR$/lesson-five/index.php" />
       </list>
     </option>
   </component>
@@ -186,12 +195,12 @@
       <updated>1573839550087</updated>
       <workItem from="1573839551290" duration="16701000" />
       <workItem from="1574285869939" duration="30658000" />
-      <workItem from="1575016344043" duration="43784000" />
+      <workItem from="1575016344043" duration="45830000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91143000" />
+    <option name="totallyTimeSpent" value="93189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -430,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson-five/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="564">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -444,18 +453,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson-five/index.php">
+    <entry file="file://$PROJECT_DIR$/lesson-five/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="454">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lesson-five/login.php">
+    <entry file="file://$PROJECT_DIR$/lesson-five/class.upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="704">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lesson-five/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
