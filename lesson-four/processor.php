@@ -19,7 +19,7 @@ if ( isset( $_FILES ) && !empty( $_FILES ) ) {
     $file_recs = please_read_file( 'database.txt' );
     $db_file = get_data_file( $dir_scan );
 
-    print_r($db_file);
+//    print_r($db_file);
 
     //print_r($db_file);
     if ( isset( $_POST['record'] ) && !empty( $_POST['record'] )  ) {
