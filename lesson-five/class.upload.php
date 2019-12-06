@@ -31,7 +31,7 @@ class Upload
     public function file_processor( $file ) {
         // $this->targetPath = $targetPath;
 
-        print_r($file);
+//        print_r($file);
 
 
         $targetPath = UPLOADS_DIR . '/';

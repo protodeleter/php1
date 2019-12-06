@@ -13,21 +13,6 @@ class TextFile {
     public $text;
 
 
-}
-
-class GuestBook extends TextFile
-{
-
-    protected $read_book;
-    public $text;
-
-    public function __construct ()
-    {
-
-        $this->read_book = file ( GB , true );
-
-    }
-
     public function getData() {
 
         $rr = $this ->read_book;
@@ -44,26 +29,26 @@ class GuestBook extends TextFile
     }
 
     public function save() {
-
         $new_arr = $this->append ();
-
         foreach ( $new_arr as $item) {
             file_put_contents ( GB , $item ."\r\n", FILE_APPEND );
         }
+    }
 
+}
+
+class GuestBook extends TextFile
+{
+
+    protected $read_book;
+
+    public function __construct ($ifle)
+    {
+
+        $this->read_book = file ( $ifle , true );
 
     }
 
 
 }
-
-$gb = new GuestBook();
-
-$gb->text = 'new test';
-$gb -> append();
-$gb -> save();
-
-$gb->text = 'new test 2';
-$gb -> append();
-$gb -> save();
 
