@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="845a082e-f32c-49fc-8cc5-a0ba6c40d82c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/OOP/Uploader.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OOP/GuestBook.php" afterPath="$PROJECT_DIR$/OOP/GuestBook.php" />
-      <change beforePath="$PROJECT_DIR$/OOP/guestbook.txt" afterPath="$PROJECT_DIR$/OOP/guestbook.txt" />
       <change beforePath="$PROJECT_DIR$/OOP/index.php" afterPath="$PROJECT_DIR$/OOP/index.php" />
-      <change beforePath="$PROJECT_DIR$/lesson-five/class.upload.php" afterPath="$PROJECT_DIR$/lesson-five/class.upload.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,21 +13,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OOP/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="124">
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Uploader.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Uploader.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OOP/Uploader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="484">
+              <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -106,8 +101,8 @@
         <option value="$PROJECT_DIR$/OOP/guestbook.txt" />
         <option value="$PROJECT_DIR$/lesson-five/class.upload.php" />
         <option value="$PROJECT_DIR$/OOP/GuestBook.php" />
-        <option value="$PROJECT_DIR$/OOP/index.php" />
         <option value="$PROJECT_DIR$/OOP/Uploader.php" />
+        <option value="$PROJECT_DIR$/OOP/index.php" />
       </list>
     </option>
   </component>
@@ -201,12 +196,12 @@
       <updated>1573839550087</updated>
       <workItem from="1573839551290" duration="16701000" />
       <workItem from="1574285869939" duration="30658000" />
-      <workItem from="1575016344043" duration="57559000" />
+      <workItem from="1575016344043" duration="57580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104918000" />
+    <option name="totallyTimeSpent" value="104939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -555,18 +550,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OOP/index.php">
+    <entry file="file://$PROJECT_DIR$/OOP/Uploader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="484">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OOP/Uploader.php">
+    <entry file="file://$PROJECT_DIR$/OOP/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="124">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -13,13 +13,13 @@ include_once 'Uploader.php';
 
 $gb = new GuestBook(GB);
 
-//$gb->text = 'new test';
-//$gb -> append();
-//$gb -> save();
-//
-//$gb->text = 'new test 2';
-//$gb -> append();
-//$gb -> save();
+$gb->text = 'new test';
+$gb -> append();
+$gb -> save();
+
+$gb->text = 'new test 2';
+$gb -> append();
+$gb -> save();
 
 
 if (isset($_POST) && isset( $_FILES )) {
