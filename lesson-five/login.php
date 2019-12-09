@@ -5,12 +5,10 @@
  * Date: 01.12.2019
  * Time: 22:17
  */
-ob_start();
 
 session_start ();
 include_once 'functions.php';
 
-//print_r( $_POST );
 
 if ( $_POST ):
 
@@ -48,7 +46,6 @@ if ( $login != '' && !existsUser($login) ) {
 
 endif;
 
-//print_r($_SESSION);
 
 if ( isset( $_SESSION['user'] ) ) {
 

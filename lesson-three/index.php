@@ -6,10 +6,6 @@
  * Time: 19:59
  */
 
-
-//include ( 'get_form.php' );
-
-
 $kitties = [
     1 => '42',
     2 => '43'
@@ -26,11 +22,7 @@ $kitties = [
     <meta charset="utf-8">
 </head>
 
-
-
 <body>
-
-
 <style type="text/css">
     * {
         display: block;
@@ -48,30 +40,17 @@ $kitties = [
     }
 </style>
 
-
-
 <a href="get_form.php"> CALCULATOR </a>
-
-
 
 <ul>
 
-
-    <?php
-    foreach ( $kitties as $kitty) {
-
-
-        ?>
-
+    <?php foreach ( $kitties as $kitty) { ?>
         <li>
             <a href="image.php?id=<?php echo $kitty; ?>">
                 <img src="img/image-<?php echo $kitty; ?>.jpg"  alt=""/>
             </a>
         </li>
-
-        <?php
-    }
-    ?>
+        <?php } ?>
 
 </ul>
 

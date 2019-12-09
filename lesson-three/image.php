@@ -1,25 +1,15 @@
 <?php
-
-
-
-
-
 if (isset( $_GET['id'] ) && !empty($_GET['id'])) {
     $img_id = $_GET['id'];
 } ?>
 
 <!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
 </head>
 
-
-
 <body>
-
-
 <style type="text/css">
     * {
         display: block;

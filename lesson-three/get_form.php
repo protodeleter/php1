@@ -31,19 +31,14 @@ if ( isset( $_GET ) ) {
 </head>
 
 <body>
-
-
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
-
+<form action="/lesson-three/get_form.php" method="get">
     число
     <input type="number" value="<?php echo $number_one; ?>" name="number_one" placeholder=""/>
     число
     <input type="number" value="<?php echo $number_two; ?>" name="number_two" placeholder=""/>
     знак
     <input type="text" value="<?php echo $math_sign; ?>" name="math_sign" placeholder=""/>
-
     <input type="submit" value="равно" name="" /> <?php echo calculator_php( $number_one,$number_two,$math_sign ); ?>
-
 </form>
 
 
@@ -55,18 +50,19 @@ if ( isset( $_GET ) ) {
 
         $result = false;
         switch($char) {
-            case '-': return $result = $a - $b;
-            case '*': return $result = $a * $b;
+            case '-':
+                return $result = $a - $b;
+                break;
+            case '*':
+                return $result = $a * $b;
+                break;
             case '+': return $result = $a + $b;
+                break;
             case '/': return $result = $a / $b;
+                break;
         }
         return $result;
     }
-
-//    echo calculator_php( $number_one,$number_two,$math_sign );
-//    $result = (int)$number_one . $math_sign . (int)$number_two;
-//    echo $result;
-
 
     ?>
 
