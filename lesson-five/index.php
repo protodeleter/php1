@@ -17,15 +17,6 @@ if ( !isset( $_SESSION['user'] ) ) {
 }
 
 
-    if ( isset( $_FILES['upload'] ) ):
-
-        $upl = new Upload( $_FILES );
-        print_r( $_SESSION['errors'] );
-
-    endif;
-
-
-
 ?>
 
 <html>

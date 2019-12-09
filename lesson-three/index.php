@@ -7,10 +7,9 @@
  */
 
 $kitties = [
-    1 => '42',
-    2 => '43'
+    1 => 'catone.jpg',
+    2 => 'cattwo.jpg'
 ];
-
 ?>
 
 
@@ -44,12 +43,14 @@ $kitties = [
 
 <ul>
 
-    <?php foreach ( $kitties as $kitty) { ?>
+    <?php foreach ( $kitties as $k => $kitty) { ?>
+
         <li>
-            <a href="image.php?id=<?php echo $kitty; ?>">
-                <img src="img/image-<?php echo $kitty; ?>.jpg"  alt=""/>
+            <a href="image.php?id=<?php echo $k; ?>">
+                <img src="img/<?php echo $kitty; ?>"  alt=""/>
             </a>
         </li>
+
         <?php } ?>
 
 </ul>

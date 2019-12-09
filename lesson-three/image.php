@@ -1,7 +1,15 @@
 <?php
+
 if (isset( $_GET['id'] ) && !empty($_GET['id'])) {
     $img_id = $_GET['id'];
-} ?>
+}
+
+$kitties = [
+    1 => 'catone.jpg',
+    2 => 'cattwo.jpg'
+];
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -27,9 +35,8 @@ if (isset( $_GET['id'] ) && !empty($_GET['id'])) {
     }
 </style>
 
-
 <div>
-    <img src="img/image-<?php echo $img_id; ?>.jpg"  alt=""/>
+    <img src="img/<?php echo $kitties[$img_id]; ?>"  alt=""/>
 </div>
 
 

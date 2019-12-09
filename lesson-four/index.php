@@ -6,23 +6,20 @@ session_start();
 
 //print_r( $_SESSION );
 
-if ( isset( $_SESSION['errors'] ) && !empty( $_SESSION['errors'] ) ) {
-
-    $errors = $_SESSION['errors'];
-
-//    print_r($errors);
-
-    if ( is_array ($error) ) {
-        foreach ( $errors as $s_error ) {
-            echo $s_error ;
-        }
-    } else {
-        echo $errors ;
-    }
-
-}
-
-unset($_SESSION['errors']);
+//if ( isset( $_SESSION['errors'] ) && !empty( $_SESSION['errors'] ) ) {
+//
+//    $errors = $_SESSION['errors'];
+//
+//
+//    if ( is_array ($error) ) {
+//        foreach ( $errors as $s_error ) {
+//            echo $s_error ;
+//        }
+//    } else {
+//        echo $errors ;
+//    }
+//
+//}
 
 
 ?>
@@ -100,7 +97,7 @@ $file_recs = please_read_file( 'database.txt' );
     <?php $img_file = get_gallery_files( $gal_dir );
     foreach ( $img_file as $img_f ) { ?>
         <li>
-            <img src="https://php.local/files-work/gallery/<?php echo $img_f; ?>">
+            <img src="gallery/<?php echo $img_f; ?>">
         </li>
     <?php } ?>
 

@@ -6,32 +6,28 @@
  * Time: 11:33
  */
 include_once 'functions.php';
-include( 'class.upload.php' );
-
-ob_start();
 
 if ( isset( $_FILES ) && !empty( $_FILES ) ) {
 
-    $upl = new Upload($_FILES);
+        move_uploaded_file( $_FILES['img_upl']['tmp_name'], __DIR__.'/gallery/' . $_FILES['img_upl']['name'] );
 
 }  else  {
 
     $file_recs = please_read_file( 'database.txt' );
     $db_file = get_data_file( $dir_scan );
 
-//    print_r($db_file);
 
-    //print_r($db_file);
     if ( isset( $_POST['record'] ) && !empty( $_POST['record'] )  ) {
         $record = $_POST['record'];
     }
+
+
     if ( $record ) {
       file_put_contents ( __DIR__.'/'.$db_file , $record ."\r\n", FILE_APPEND );
     }
 
 }
 
-ob_get_clean ();
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;

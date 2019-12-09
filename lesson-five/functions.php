@@ -28,7 +28,7 @@ function сheckPassword($login, $password) {
 
     foreach ($u_list as $k => $u) {
 
-        if ( $login === $u['username']  &&  password_verify ( $password, $u['password']  ) ) {
+        if ( $u['username'] == $login  &&  password_verify ( $password, $u['password']  ) ) {
 //            $_SESSION['user'] = $login;
             return true;
         }
