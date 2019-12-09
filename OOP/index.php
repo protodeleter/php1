@@ -6,20 +6,23 @@
  * Time: 11:41
  */
 
+const GB = __DIR__."/guestbook.txt" ;
 
 include_once 'GuestBook.php';
 include_once 'Uploader.php';
 
-
 $gb = new GuestBook(GB);
 
+
+$guestBookRecords = $gb->getData ();
+
+foreach ($guestBookRecords as $guestBookRecord) {
+    echo $guestBookRecord . '<br />';
+}
+
 $gb->text = 'new test';
-$gb -> append();
 $gb -> save();
 
-$gb->text = 'new test 2';
-$gb -> append();
-$gb -> save();
 
 
 if (isset($_POST) && isset( $_FILES )) {

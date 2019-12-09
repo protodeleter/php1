@@ -6,7 +6,7 @@
  * Time: 11:49
  */
 
-const GB = __DIR__."/guestbook.txt" ;
+//file_put_contents(GB, "");
 
 
 class TextFile {
@@ -22,17 +22,25 @@ class TextFile {
     public function append() {
 
         $rrr = $this->getData ();
-
         array_push ($rrr ,$this->text);
 
         return $rrr;
     }
 
     public function save() {
+
+        $new_arr=[];
+
         $new_arr = $this->append ();
-        foreach ( $new_arr as $item) {
-            file_put_contents ( GB , $item ."\r\n", FILE_APPEND );
-        }
+
+//        print_r($new_arr);
+
+        $str = implode("", $new_arr);
+
+//        print_r($str);
+
+        file_put_contents ( GB , $str."\n" );
+
     }
 
 }

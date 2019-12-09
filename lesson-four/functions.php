@@ -35,10 +35,7 @@ function get_gallery_files( $dir_parameter ) {
     foreach ($dir_parameter as $d_f) {
 
         if ( is_file ( __DIR__.'/gallery/' . $d_f ) ) {
-
             $img_arr[]  = $d_f;
-
-
         }
 
 
