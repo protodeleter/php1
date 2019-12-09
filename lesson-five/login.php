@@ -10,50 +10,48 @@ session_start ();
 include_once 'functions.php';
 
 
-if ( $_POST ):
+
+
+if ( isset($_POST) && !empty($_POST) ):
 
 if ( isset( $_POST['username'] ) && !empty($_POST['username']) ) {
     $login = $_POST['username'];
 } else {
-    $login = '';
+    $login = null;
 }
 
 if ( isset( $_POST['password'] ) && !empty( $_POST['username'] ) ) {
     $password = $_POST['password'];
 } else {
-    $password = '';
+    $password = null;
 }
 
+if ( $login && !$password && !existsUser($login) ) {
 
-
-if ( $login != '' && !existsUser($login) ) {
-
-    echo 'user doesn"t exist';
+    echo 'user doesnt exist';
 
 } else {
 
-    if (  сheckPassword( $login, $password ) ) {
+
+    if (  сheckPassword( $login, $password )  ) {
 
         $_SESSION['user'] = $login;
+        Header( 'Location: /lesson-five/index.php' );
 
     } else {
-
-        echo 'Details wrong';
-
+        echo 'Wrong Details';
     }
 
 }
 
+
+
+
 endif;
 
+if ( !isset( $_SESSION['user'] ) ) { ?>
 
-if ( isset( $_SESSION['user'] ) ) {
-
-    Header( 'Location: /lesson-five/index.php' );
-
-} else { ?>
-
-<form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" >
+<form method="post" action="/lesson-five/login.php" >
     <input type="text" name="username" value="" placeholder="Username" />
     <input type="password" name="password" value="" placeholder="Password" />
     <input type="submit" value="Login" />

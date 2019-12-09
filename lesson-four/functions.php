@@ -24,8 +24,6 @@ function get_data_file( $dir_parameter ) {
 // getting txt file
 $db_file = get_data_file( $dir_scan );
 
-
-
 function get_gallery_files( $dir_parameter ) {
     $img_arr = [];
     foreach ($dir_parameter as $d_f) {
@@ -35,7 +33,6 @@ function get_gallery_files( $dir_parameter ) {
     }
     return $img_arr;
 }
-
 
 // reading file from function get_data_file( $dir_scan )
 // and returning and array of text found in this file

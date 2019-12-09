@@ -23,28 +23,20 @@ function existsUser($login) {
 }
 
 function сheckPassword($login, $password) {
-
     $u_list = getUsersList();
-
     foreach ($u_list as $k => $u) {
-
         if ( $u['username'] == $login  &&  password_verify ( $password, $u['password']  ) ) {
 //            $_SESSION['user'] = $login;
             return true;
         }
-
     }
-
     return false;
 }
 
 function getCurrentUser() {
     if ( isset( $_SESSION['user'] ) ) {
-
         return $_SESSION['user'];
-
     }
-
     return false;
 }
 

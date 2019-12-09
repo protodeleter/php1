@@ -2,39 +2,12 @@
 
 include( 'functions.php' );
 session_start();
-
-
-//print_r( $_SESSION );
-
-//if ( isset( $_SESSION['errors'] ) && !empty( $_SESSION['errors'] ) ) {
-//
-//    $errors = $_SESSION['errors'];
-//
-//
-//    if ( is_array ($error) ) {
-//        foreach ( $errors as $s_error ) {
-//            echo $s_error ;
-//        }
-//    } else {
-//        echo $errors ;
-//    }
-//
-//}
-
-
 ?>
 
 <html>
-
-<head>
-
-    <title> Гостевая книга </title>
-
-
-
-</head>
-
-
+    <head>
+        <title> Гостевая книга </title>
+    </head>
 <body>
 
 <?php
