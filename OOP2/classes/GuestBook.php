@@ -29,17 +29,17 @@ class TextFile {
 
     public function save() {
 
-        $new_arr = [];
+        $new_arr=[];
 
         $new_arr = $this->append ();
 
 //        print_r($new_arr);
 
-        $str = implode("\r\n", $new_arr);
+        $str = implode("", $new_arr);
 
 //        print_r($str);
 
-        file_put_contents ( GB , $str );
+        file_put_contents ( GB , $str."\n" );
 
     }
 
@@ -53,8 +53,7 @@ class GuestBook extends TextFile
     public function __construct ($ifle)
     {
 
-        $this->read_book = file ( $ifle , FILE_IGNORE_NEW_LINES ,  null );
-
+        $this->read_book = file ( $ifle , true , FILE_IGNORE_NEW_LINES);
 
     }
 
