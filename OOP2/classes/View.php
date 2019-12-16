@@ -10,7 +10,7 @@ class View
 {
 
     protected $data = [];
-    public $template;
+    protected $template;
 
     public function __construct ()
     {
@@ -18,13 +18,8 @@ class View
 
     public function assign( $name, $value ) {
 
-        // получает имя шаблона
-        $this->template = $name;
-
-        $this->display( $name );
-
-        // получает запись
-        $this->data = $value;
+        // по имени шаблона
+        $this -> data = [ $name => $value ];
 
     }
 
@@ -32,9 +27,8 @@ class View
 
         // Получает имя шаблона
         $this->template = $template;
-
         // Подключает шаблон
-        include __DIR__.'/../tpl/'. $this->template;
+        include __DIR__.'/../tpl/'. $this->template.'.php';
 
     }
 
