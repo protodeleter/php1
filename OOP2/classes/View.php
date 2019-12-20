@@ -12,37 +12,40 @@ class View
     protected $data = [];
     protected $template;
 
+
+
     public function __construct ()
     {
     }
 
     public function assign( $name, $value ) {
-
         // по имени шаблона
-        $this -> data = [ $name => $value ];
-
+        $this->data[$name] = $value;
     }
 
     public function display($template) {
 
         // Получает имя шаблона
         $this->template = $template;
-        // Подключает шаблон
-        include __DIR__.'/../tpl/'. $this->template.'.php';
+        $this->render($template);
 
     }
 
-//    public function render($template) {
-//
-//        ob_start ();
-//
-//
-//        $template = $this->path . '/../tpl/' . $template;
-//
-//        return ob_get_contents ();
-//
-//        ob_get_clean ();
-//    }
+    public function render($template) {
+
+        ob_start ();
+
+        $this -> template = $template;
+
+        include ( __DIR__.'/../tpl/'. $this->template.'.php' );
+
+        $incl_temp = ob_get_contents ();
+
+        return $incl_temp;
+
+        ob_get_clean ();
+
+    }
 
 }
 

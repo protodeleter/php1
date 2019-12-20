@@ -10,9 +10,34 @@ require_once __DIR__ . '/classes/view.php';
 
 $view = new View();
 
-$view -> assign ('template' , ['news' => 'news 1']);
+$view -> assign ('news' , ['New 1','New 2'] );
 
-$view ->display('template');
+echo $view ->display('template');
+
 
 ?>
 
+
+<html>
+
+<head>
+
+    <title>
+        Site
+    </title>
+
+</head>
+
+<body>
+
+
+<div>
+
+
+</div>
+
+
+</body>
+
+
+</html>

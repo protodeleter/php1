@@ -13,7 +13,6 @@ include_once 'Uploader.php';
 
 $gb = new GuestBook(GB);
 
-
 $guestBookRecords = $gb->getData ();
 
 foreach ($guestBookRecords as $guestBookRecord) {
@@ -22,8 +21,6 @@ foreach ($guestBookRecords as $guestBookRecord) {
 
 $gb->text = 'new test';
 $gb -> save();
-
-
 
 if (isset($_POST) && isset( $_FILES )) {
 
@@ -35,12 +32,7 @@ if (isset($_POST) && isset( $_FILES )) {
 
     }
 
-
 }
-
-
-
-
 ?>
 
 
@@ -53,7 +45,7 @@ if (isset($_POST) && isset( $_FILES )) {
 <body>
 
 
-<form method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+<form method="post" action="" enctype="multipart/form-data">
 
     <input type="file" value="" name="file_upl"/>
     <input type="submit" value="submit" >
