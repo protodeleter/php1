@@ -13,11 +13,10 @@ $news = new News();
 
 
 $newsFiles = $news->readAllNews ();
-
-//print_r($newsFiles);
+$exploadedNews = $news->explodeNews ();
 
 $view = new View();
 
-$view -> assign ('news' , $newsFiles );
+$view -> assign ('news' , $exploadedNews );
 
 $view ->display('news');

@@ -12,6 +12,7 @@ class Article extends News
 {
 
     protected $art_id;
+
     public function __construct( $aId ) {
         $this->art_id = $aId;
         return $aId;
@@ -19,24 +20,20 @@ class Article extends News
 
     public function getArticle() {
 
+        $allArts = $this->explodeNews ();
 
-        $cur_art = [];
+        $result = [];
 
-        foreach ( $this->readAllNews() as $k => $v ) {
+        foreach ( $allArts as $k => $datum ) {
 
-
-
-            if ( $v[0] = $this->art_id ) {
-
-                print_r( $this->readAllNews()[$k][0] );
-
-                return $v[0] . '<br />';
+            if ( $allArts[$k][0] == $this->art_id ) {
+                $result[] .= $datum[1];
+                $result[] .= $datum[3];
             }
 
         }
 
-        return false;
-
+        return $result;
     }
 
 

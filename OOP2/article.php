@@ -10,23 +10,15 @@ require_once __DIR__ . '/classes/view.php';
 require_once __DIR__ . '/classes/article.php';
 
 
-if ( isset( $_GET['id'] ) ) {
 
+if ( isset( $_GET['id'] ) ) {
     $article = new Article($_GET['id']);
 
-
-    $article->getArticle();
-
+    $newsFiles = $article->getArticle();
 
 }
+$view = new View();
 
-//
-//$newsFiles = $news->readAllNews ();
-//
-////print_r($newsFiles);
-//
-//$view = new View();
-//
-//$view -> assign ('news' , $newsFiles );
-//
-//$view ->display('news');
+$view -> assign ('article' , $newsFiles );
+
+$view ->display('article_tpl');

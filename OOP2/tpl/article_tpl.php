@@ -6,8 +6,8 @@
  * Time: 16:38
  */
 require_once __DIR__. '/../classes/View.php';
-
 $data = $this->data;
+?>
 
-print_r( $data );
-
+<h1> <?php echo $data['article'][0]; ?> </h1>
+<p> <?php echo $data['article'][1]; ?> </p>

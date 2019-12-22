@@ -11,12 +11,7 @@ class News
 
     protected $path;
 
-    public function __construct ()
-    {
-
-    }
-
-    public function getAllNews(){
+    public function findNews(){
 
         $this->path = __DIR__.'/../newsdb/';
 
@@ -26,21 +21,32 @@ class News
     }
 
     public function readAllNews() {
-
-        $foundNews = $this->getAllNews ();
-
-
-        $newsFiles = [];
+        $foundNews = $this->findNews ();
+        $newsFiles = '';
 
         foreach ($foundNews as $fn) {
-
             if (is_file ($this->path . '/'.$fn)) {
-                $newsFiles[] = file ( $this->path . '/'.$fn );
+                $newsFiles = file ( $this->path . '/'.$fn,FILE_IGNORE_NEW_LINES );
             }
         }
-
         return $newsFiles;
-
     }
+
+    /**
+     * @return mixed
+     */
+    public function explodeNews ()
+    {
+        $receivedNews = $this->readAllNews();
+
+        $rnArr = [];
+
+        foreach ($receivedNews as $receivedNew) {
+            $rnArr[] = explode ('~' , $receivedNew );
+        }
+
+        return $rnArr;
+    }
+
 
 }

@@ -2,8 +2,8 @@
 require_once __DIR__. '/../classes/View.php';
 
 $data = $this->data;
+print_r($datu);
 
-print_r($data);
 
 //?>
 
@@ -21,18 +21,20 @@ print_r($data);
 
 <ul>
 
-<?php
-foreach ( $data as $k => $datum ) { ?>
-    <?php
-    foreach( $data[$k] as $kk => $newsItem ) { ?>
+<?php foreach ( $data['news'] as $k => $datum ) {
+    ?>
     <li>
-        <h3> <?php echo $newsItem[1].'<br />'; ?> </h3>
-        <?php echo $newsItem[2].'<br />'; ?>
-        <a href="article.php?id=<?php echo $newsItem[0]; ?>"> <?php echo $newsItem[1]; ?> </a>
+
+        <h3>
+            <?php echo $datum[1];?>
+        </h3>
+
+        <div>
+            <?php echo $datum[2];?>
+        </div>
+
+        <a href="article.php?id=<?php echo $datum[0];?>"> <?php echo $datum[1];?> </a>
     </li>
-
-    <?php } ?>
-
 <?php } ?>
 
 </ul>
