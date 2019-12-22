@@ -14,7 +14,6 @@ class News
     public function findNews(){
 
         $this->path = __DIR__.'/../newsdb/';
-
         $newsArr = scandir ( $this->path );
 
         return $newsArr;
@@ -25,11 +24,20 @@ class News
         $newsFiles = '';
 
         foreach ($foundNews as $fn) {
-            if (is_file ($this->path . '/'.$fn)) {
+            if ( $this->it_is_file($fn)) {
                 $newsFiles = file ( $this->path . '/'.$fn,FILE_IGNORE_NEW_LINES );
             }
         }
         return $newsFiles;
+    }
+
+    protected function it_is_file( $fileName ) {
+
+        if ( is_file ($this->path . '/'.$fileName) ) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
