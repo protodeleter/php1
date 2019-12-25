@@ -11,12 +11,12 @@ require_once __DIR__ . '/classes/news.php';
 
 $news = new News();
 
+//print_r ( $news->getAllNews() );
 
-$newsFiles = $news->readAllNews ();
-$exploadedNews = $news->explodeNews ();
+
 
 $view = new View();
 
-$view -> assign ('news' , $exploadedNews );
+$view -> assign ('news' , $news->getAllNews() );
 
 $view ->display('news');

@@ -12,14 +12,19 @@ class News
     protected $path;
 
     public function findNews(){
-
         $this->path = __DIR__.'/../newsdb/';
         $newsArr = scandir ( $this->path );
-
         return $newsArr;
     }
 
-    public function readAllNews() {
+    protected function it_is_file( $fileName ) {
+        if ( is_file ($this->path . '/'.$fileName) ) {
+            return true;
+        }
+        return false;
+    }
+
+    protected function readAllNews() {
         $foundNews = $this->findNews ();
         $newsFiles = '';
 
@@ -31,30 +36,23 @@ class News
         return $newsFiles;
     }
 
-    protected function it_is_file( $fileName ) {
-
-        if ( is_file ($this->path . '/'.$fileName) ) {
-            return true;
-        }
-
-        return false;
-    }
-
     /**
      * @return mixed
      */
-    public function explodeNews ()
+    protected function explodeNews ()
     {
         $receivedNews = $this->readAllNews();
-
         $rnArr = [];
-
         foreach ($receivedNews as $receivedNew) {
             $rnArr[] = explode ('~' , $receivedNew );
         }
-
+        // print_r($receivedNews);
         return $rnArr;
     }
 
+
+    public function getAllNews() {
+        return $this->explodeNews ();
+    }
 
 }
