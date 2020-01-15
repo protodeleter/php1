@@ -23,7 +23,7 @@ $data = $this->data;
 
 <?php foreach ( $data['news'] as $k => $new ) {
 
-    print_r($new);
+//    print_r($new);
 
     ?>
     <li>
