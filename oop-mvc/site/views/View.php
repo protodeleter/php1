@@ -2,10 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: paulPc
- * Date: 13.12.2019
- * Time: 11:55
+ * Date: 02.02.2020
+ * Time: 23:27
  */
 
+namespace views;
 
 class View
 {
@@ -41,7 +42,7 @@ class View
 
         $this -> template = $template;
 
-        include ( __DIR__.'/../tpl/'. $this->template.'.php' );
+        include ( __DIR__.'\..\tpl\\'. $this->template.'.php' );
 
         $incl_temp = ob_get_contents ();
 

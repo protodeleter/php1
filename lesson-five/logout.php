@@ -10,4 +10,4 @@ session_start ();
 
 unset( $_SESSION['user'] );
 
-Header( 'Location: /lesson-five/index.php' );
+Header( 'Location: /lesson-five/main.php' );

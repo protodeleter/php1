@@ -36,7 +36,7 @@ if ( $login && !$password && !existsUser($login) ) {
     if (  сheckPassword( $login, $password )  ) {
 
         $_SESSION['user'] = $login;
-        Header( 'Location: /lesson-five/index.php' );
+        Header( 'Location: /lesson-five/main.php' );
 
     } else {
         echo 'Wrong Details';

@@ -2,13 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: paulPc
- * Date: 10.01.2020
- * Time: 15:32
+ * Date: 24.01.2020
+ * Time: 18:51
  */
+namespace classes;
 
-include_once __DIR__.'/View.php';
-
-class DB extends View
+class DB
 {
     protected $dbn;
     protected $sql;
@@ -19,9 +18,11 @@ class DB extends View
     public function __construct ()
     {
 
-        include (__DIR__.'/../config.php');
+        include (__DIR__.'\..\config\DB.php');
 
-        $this->dbn = new PDO( $dsn, 'root' );
+        $this->dbn = new \PDO( $dsn, 'root' );
+
+        var_dump ( $this->dbn );
 
     }
 
