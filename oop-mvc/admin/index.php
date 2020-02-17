@@ -13,4 +13,8 @@ include_once __DIR__.'/config/autoload.php';
 
 $alb_controller = new \controllers\AlbumsController();
 
+include_once __DIR__.'/templates/layout/header.php';
 $alb_controller->getAlbums ();
+include_once __DIR__.'/templates/layout/footer.php';
+
+?>

@@ -5,9 +5,7 @@
  * Date: 09.02.2020
  * Time: 0:32
  */
-
 namespace controllers;
-
 
 class AlbumsController
 {
@@ -32,7 +30,6 @@ class AlbumsController
     }
 
     public function insertAlbum($data) {
-        print_r($data);
         $this->albums_model->insertAlbumsToDb($data);
     }
 }
