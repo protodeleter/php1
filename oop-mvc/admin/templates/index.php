@@ -6,47 +6,36 @@
  * Time: 18:54
  */
 
-include_once __DIR__.'/layout/header.php';
 
 if( isset( $_POST ) && !empty( $_POST ) ) {
 
-    $album = new \controllers\AlbumsController();
+        $album = new \controllers\AlbumsController();
+        $album->insertAlbum ();
 
-    $posted_data = [];
+        print_r( $_POST );
 
-    foreach ($_POST as $item) {
-        $posted_data[] = $item;
-    }
-
-    print_r ($_POST);
-
-    $album->insertAlbum ( $posted_data );
-
+    die;
 }
 
-
+include_once __DIR__.'/layout/header.php';
 $data = $this->data;
 ?>
 
-<form method="post" action="services/formProcessor.php" id="insert">
-
+<form method="post" action="" id="alb_insert">
     <div class="form-group">
         <input type="text" class="form-control" name="alb_name" placeholder="Album name">
     </div>
-
     <div class="form-group">
         <textarea class="form-control" name="alb_desc" placeholder="Description"></textarea>
     </div>
-
     <div class="form-group">
         <input type="date" class="form-control" name="alb_year" placeholder="Album Year">
     </div>
 
     <input type="submit" class="btn btn-primary"  value="send">
-
 </form>
 
-<ul>
+<ul id="albums">
 <?php
   foreach( $data as $datum ) {
       foreach ($datum as $item ) { ?>
@@ -56,6 +45,13 @@ $data = $this->data;
         <div>
             <?php echo $item['alb_year']; ?>
         </div>
+        <input type="text" class="form-control" value="<?php echo $item['title']; ?>" name="upd_alb_name">
+        <textarea class="form-control" name="upd_alb_text">
+            <?php echo $item['description']; ?>
+        </textarea>
+
+        <a href="#" data-id="<?php echo $item['id']; ?>"> Delete Record </a>
+
     </li>
     <?php
       }
@@ -66,28 +62,3 @@ $data = $this->data;
 
 <?php include_once __DIR__.'/layout/footer.php'; ?>
 
-<script>
-
-    $(document).ready(function(){
-
-        $("form").submit(function(e){
-            e.preventDefault();
-
-            var albName = $( 'input[name="alb_name"]' ).val();
-            var albDesc = $( 'textarea[name="alb_desc"]' ).val();
-            var albYear = $( 'input[name="alb_year"]' ).val();
-
-
-            $.ajax({
-                url:'',
-                type:'post',
-                data:{albName:albName,albDesc:albDesc,albYear:albYear},
-                success:function(response){
-                    location.reload(); // reloading page
-                }
-            });
-
-        });
-    });
-
-</script>

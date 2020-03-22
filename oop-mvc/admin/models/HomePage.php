@@ -20,7 +20,7 @@ class HomePage
 
         $view = new \views\View();
 
-        print_r ($galleries->getGallery ());
+//        print_r ($galleries->getGallery ());
 
         $view->assign ('index' , $galleries->getGallery ());
         $view->display ('index');

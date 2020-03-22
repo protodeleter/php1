@@ -20,14 +20,29 @@ class Albums
     }
 
     public function insertAlbumsToDb($data) {
+        if( !empty($data) ){
 
-        $db = new \classes\Db();
-            $rr = $_POST;
-            $data = [];
-            foreach ( $rr as $k => $item) {
-                $data[] = $item;
-            }
+            print_r($data);
+
+            $db = new \classes\Db();
             $sql = "INSERT INTO albums ( title, description, alb_year ) VALUES ( ?,?,? )";
             $db->query ($sql , $data);
+        }
     }
+
+//    public function updateAlbum($data) {
+//        $db = new \classes\Db();
+//        $rr = $_POST;
+//        $data = [];
+//
+//        foreach ( $rr as $k => $item) {
+//            $data[] = $item;
+//        }
+//
+//        $sql = "UPDATE users SET title=?, description=?, alb_year=? WHERE id=?";
+//
+//        $db->query ($sql , $data);
+//
+//    }
+
 }

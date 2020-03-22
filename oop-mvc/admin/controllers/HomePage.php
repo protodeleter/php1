@@ -26,7 +26,7 @@ class HomePage
 
     public function __construct ()
     {
-        echo 'Home page Controller';
+//        echo 'Home page Controller';
     }
 
 

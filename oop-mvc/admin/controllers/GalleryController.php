@@ -15,7 +15,6 @@ class GalleryController
     public function __construct ()
     {
         $gals = new \models\GalleryModel();
-
     }
 
 }

@@ -18,13 +18,8 @@ class Db
 
     public function __construct ()
     {
-
         include (__DIR__.'\..\config\DB.php');
-
         $this->dbn = new \PDO( $dsn, 'root' );
-
-        var_dump ( $this->dbn );
-
     }
 
     public function execute( $sql ) {
